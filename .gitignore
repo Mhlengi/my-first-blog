@@ -1,0 +1,12 @@
+*.pyc
+*~
+_pychache_
+django_girls
+db.sqlite3
+/static
+.DS_Store
+/bin
+lib*
+/pip-selfcheck.json
+/share
+/pyvenv.cfg
