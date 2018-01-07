@@ -11,7 +11,10 @@ def post_list(request):
 
 def post_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
-	return render(request, 'blog/post_detail.html', {'post' : post})
+	return render(request, 'blog/popup.html', {'post' : post})
+
+def post_view(request):
+	return render(request,'blog/details_page.html')
 
 @login_required
 def post_new(request):
