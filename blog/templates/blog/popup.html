@@ -255,7 +255,7 @@
           <div class="form-group" id="form-two">
             <div class="input-group ">
               <div class="input-group-prepend">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}"/ id="svg-img" style="width: 30px"></span></button>
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}"/ id="svg-img" style="width: 30px"></span></button>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="#">My location</a>
                   <div role="separator" class="dropdown-divider"></div>
@@ -283,244 +283,245 @@
       </div>
     </div>
 
-    <div class="container" id="freelancer-cards">
-        <div class="card-deck">
-           <div class="card border-white mr-1 my-4" >
-            <div class="relative card-space">
-              <a href="file:///home/fabio/Documents/software/Web_Development/Web_Developer_Course/5-bootstrap/details_page.html">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-            <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+      <div class="container" id="freelancer-cards">
+          <div class="card-deck">
+             <div class="card border-white mr-1 my-4" >
+              <div class="relative card-space">
+                  <a href="{% url 'post_card' %}">
+                    <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                  </a> 
+                <div class="absolute" id="overlay"></div>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-          <div class="card border-white mr-1 my-4">
-            <div class="relative card-space">
-              <a href="{% url 'post_view' %}">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-            <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
+              <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
-          </div>
-          <div class="card border-white mr-1 my-4">
-            <div class="relative card-space">
-              <a href="#">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-           <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+            <div class="card border-white mr-1 my-4">
+              <div class="relative card-space">
+                <a href="{% url 'post_card' %}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-          </div>
-          <div class="card border-white mr-1 my-4">
-           <div class="relative card-space">
-              <a href="#">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-            <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+              <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
             </div>
-          </div>
-        </div> 
-        <div class="card-deck">
-           <div class="card border-white mr-1 my-4" >
-            <div class="relative card-space">
-              <a href="file:///home/fabio/Documents/software/Web_Development/Web_Developer_Course/5-bootstrap/details_page.html">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-            <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+            <div class="card border-white mr-1 my-4">
+              <div class="relative card-space">
+                <a href="#">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-          <div class="card border-white mr-1 my-4">
-            <div class="relative card-space">
-              <a href="#">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-            <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
+             <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
-          </div>
-          <div class="card border-white mr-1 my-4">
-            <div class="relative card-space">
-              <a href="#">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-           <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+            <div class="card border-white mr-1 my-4">
+             <div class="relative card-space">
+                <a href="#">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-          </div>
-          <div class="card border-white mr-1 my-4">
-           <div class="relative card-space">
-              <a href="#">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-            <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+              <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
             </div>
-          </div>
-        </div>    
+          </div> 
+          <div class="card-deck">
+             <div class="card border-white mr-1 my-4" >
+              <div class="relative card-space">
+                <a href="file:///home/fabio/Documents/software/Web_Development/Web_Developer_Course/5-bootstrap/details_page.html">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
+              </div>
+              <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="card border-white mr-1 my-4">
+              <div class="relative card-space">
+                <a href="#">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
+              </div>
+              <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="card border-white mr-1 my-4">
+              <div class="relative card-space">
+                <a href="#">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
+              </div>
+             <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              </div>
+            </div>
+            <div class="card border-white mr-1 my-4">
+             <div class="relative card-space">
+                <a href="#">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
+              </div>
+              <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              </div>
+            </div>
+          </div>    
 
-        <div class="card-deck">
-           <div class="card border-white mr-1 my-4" >
-            <div class="relative card-space">
-              <a href="{% url 'post_view'%}">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-            <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+          <div class="card-deck">
+             <div class="card border-white mr-1 my-4" >
+              <div class="relative card-space">
+                <a href="{% url 'post_card'%}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-          <div class="card border-white mr-1 my-4">
-            <div class="relative card-space">
-              <a href="#">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-            <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
+              <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
-          </div>
-          <div class="card border-white mr-1 my-4">
-            <div class="relative card-space">
-              <a href="#">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-           <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+            <div class="card border-white mr-1 my-4">
+              <div class="relative card-space">
+                <a href="#">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-          </div>
-          <div class="card border-white mr-1 my-4">
-           <div class="relative card-space">
-              <a href="#">
-                <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-              </a>
-              <div class="absolute" id="overlay"></div>
-            </div>
-            <div class="card-body pt-2">
-              <div class="rating mb-1">    
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+              <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               </div>
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
             </div>
-          </div>
-        </div>   
-     </div>
-
+            <div class="card border-white mr-1 my-4">
+              <div class="relative card-space">
+                <a href="#">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
+              </div>
+             <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              </div>
+            </div>
+            <div class="card border-white mr-1 my-4">
+             <div class="relative card-space">
+                <a href="#">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                </a>
+                <div class="absolute" id="overlay"></div>
+              </div>
+              <div class="card-body pt-2">
+                <div class="rating mb-1">    
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              </div>
+            </div>
+          </div>   
+       </div>
+      
+  <!--     
      <div class="container-fluid bg-light my-1" id="about">
       <div id="snowflakeContainer">
           <p class="snowflake">*</p>
