@@ -283,12 +283,12 @@
       </div>
     </div>
 
-      <div class="container" id="freelancer-cards">
+        <div class="container" id="freelancer-cards">
           <div class="card-deck">
              <div class="card border-white mr-1 my-4" >
               <div class="relative card-space">
-                  <a href="{% url 'post_card' %}">
-                    <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                  <a href="{% url 'post_card' pk=post.pk %}">
+                    <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
                   </a> 
                 <div class="absolute" id="overlay"></div>
               </div>
@@ -306,8 +306,8 @@
             </div>
             <div class="card border-white mr-1 my-4">
               <div class="relative card-space">
-                <a href="{% url 'post_card' %}">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                <a href="{% url 'post_card' pk=post.pk %}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
                 </a>
                 <div class="absolute" id="overlay"></div>
               </div>
@@ -325,8 +325,8 @@
             </div>
             <div class="card border-white mr-1 my-4">
               <div class="relative card-space">
-                <a href="#">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                <a href="{% url 'post_card' pk=post.pk %}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
                 </a>
                 <div class="absolute" id="overlay"></div>
               </div>
@@ -344,8 +344,8 @@
             </div>
             <div class="card border-white mr-1 my-4">
              <div class="relative card-space">
-                <a href="#">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                <a href="{% url 'post_card' pk=post.pk %}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
                 </a>
                 <div class="absolute" id="overlay"></div>
               </div>
@@ -365,9 +365,9 @@
           <div class="card-deck">
              <div class="card border-white mr-1 my-4" >
               <div class="relative card-space">
-                <a href="file:///home/fabio/Documents/software/Web_Development/Web_Developer_Course/5-bootstrap/details_page.html">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-                </a>
+                  <a href="{% url 'post_card' pk=post.pk %}">
+                    <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
+                  </a> 
                 <div class="absolute" id="overlay"></div>
               </div>
               <div class="card-body pt-2">
@@ -384,8 +384,8 @@
             </div>
             <div class="card border-white mr-1 my-4">
               <div class="relative card-space">
-                <a href="#">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                <a href="{% url 'post_card' pk=post.pk %}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
                 </a>
                 <div class="absolute" id="overlay"></div>
               </div>
@@ -403,8 +403,8 @@
             </div>
             <div class="card border-white mr-1 my-4">
               <div class="relative card-space">
-                <a href="#">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                <a href="{% url 'post_card' pk=post.pk %}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
                 </a>
                 <div class="absolute" id="overlay"></div>
               </div>
@@ -422,8 +422,8 @@
             </div>
             <div class="card border-white mr-1 my-4">
              <div class="relative card-space">
-                <a href="#">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                <a href="{% url 'post_card' pk=post.pk %}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
                 </a>
                 <div class="absolute" id="overlay"></div>
               </div>
@@ -444,9 +444,9 @@
           <div class="card-deck">
              <div class="card border-white mr-1 my-4" >
               <div class="relative card-space">
-                <a href="{% url 'post_card'%}">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
-                </a>
+                  <a href="{% url 'post_card' pk=post.pk %}">
+                    <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
+                  </a> 
                 <div class="absolute" id="overlay"></div>
               </div>
               <div class="card-body pt-2">
@@ -463,8 +463,8 @@
             </div>
             <div class="card border-white mr-1 my-4">
               <div class="relative card-space">
-                <a href="#">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                <a href="{% url 'post_card' pk=post.pk %}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
                 </a>
                 <div class="absolute" id="overlay"></div>
               </div>
@@ -482,8 +482,8 @@
             </div>
             <div class="card border-white mr-1 my-4">
               <div class="relative card-space">
-                <a href="#">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                <a href="{% url 'post_card' pk=post.pk %}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
                 </a>
                 <div class="absolute" id="overlay"></div>
               </div>
@@ -501,8 +501,8 @@
             </div>
             <div class="card border-white mr-1 my-4">
              <div class="relative card-space">
-                <a href="#">
-                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img"> 
+                <a href="{% url 'post_card' pk=post.pk %}">
+                  <img class="card-img-top" src="{% static 'images/water.jpg' %}" alt="Card image cap"> 
                 </a>
                 <div class="absolute" id="overlay"></div>
               </div>
@@ -518,8 +518,7 @@
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
               </div>
             </div>
-          </div>   
-       </div>
+          </div>
       
   <!--     
      <div class="container-fluid bg-light my-1" id="about">
@@ -584,11 +583,12 @@
           modal.find('.modal-body input').val(recipient)
         })
 
-        $('.card-space').hover(function() {
+      //  $('.card-space').hover(function() {
           //alert('hovering')
-          $(this).find('#overlay').css("display", "block")}, function () {
-          $(this).find('#overlay').css("display", "none")
-        });
+      //    $(this).find('#overlay').css("display", "block")}, function () {
+      //    $(this).find('#overlay').css("display", "none")
+      //  });
+        
         
         //alert($('#card-img').css('height'));
         
