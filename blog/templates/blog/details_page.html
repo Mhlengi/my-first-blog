@@ -59,10 +59,8 @@
 
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-telephone">Telephone</a>
-              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="admin-popup@gmail.com" id="drop-email">Email</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Blog</a>
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-telephone">Info</a>
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="admin-popup@gmail.com" id="drop-email">Direct Message</a>
             </div>
           </li>
         </ul>
@@ -85,18 +83,19 @@
       </div>
     </nav>
 
-    <div id="modalOne">
+<div id="modalOne">
       <div class="modal fade" id="modal-telephone" tabindex="-1" role="dialog" aria-labelledby="model-telephoneLabel" aria-hidden="true">
        <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title ml-auto" id="model-telephoneLabel">Call Us</h5>
+            <h5 class="modal-title ml-auto" id="model-telephoneLabel">Contact Us</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body mx-auto my-3">
+          <div class="modal-body my-3" style="text-align: center">
             <h3>Telephone: 0219888637</h3>
+            <h3>Email: admin-popup@gmail.com</h3>
           </div>
           <div class="bg-light my-0" style="text-align: center;color: gray" id="modalTelephoneFooter">
             <p>1234 Smith and Western Street<br />Cape Town <br />South Africa</p>
@@ -104,7 +103,7 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
 
     <div id="modalTwo">
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
@@ -120,8 +119,8 @@
               <div class="modal-body">
                 <form>
                   <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                    <input type="text" class="form-control" id="recipient-name">
+                    <label for="sender-name" class="col-form-label">Sender:</label>
+                    <input type="text" class="form-control" id="sender-name" placeholder="Your Email">
                   </div>
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Message:</label>

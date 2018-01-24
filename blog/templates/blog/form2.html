@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+
+    <!-- Old version 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">-->
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+
+  <style> 
+
+  body {
+    padding: 50px;
+    overflow: hidden;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #large-img {
+    width: 100%;
+    height: 200px;
+    background-color: orange;
+  }
+
+  .img-small {
+    width: 100%;
+    height: 100px;
+    margin:5px;
+    background-color:#0e3ab2;
+    color:white;
+  }
+  </style>
+        
+
+ </head>
+ <body data-spy="scroll" data-target="#navBar" data-offset="0">
+    <nav id="navBar" class="navbar navbar-expand-md navbar-light bg-light fixed-top" >
+      <a class="navbar-brand" href="#">PopUp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcollapse" aria-controls="navcollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navcollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="#freelancer-cards">All Services <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Contact Us
+            </a>
+
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-telephone">Info</a>
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="admin-popup@gmail.com" id="drop-email">Direct Message</a>
+            </div>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav " id="rightnav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Become A Service Provider</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="login">Login</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 hidden" id="loginform">
+          <input class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="Email">
+          <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+        </form>
+      </div>
+    </nav>
+
+<div id="modalOne">
+      <div class="modal fade" id="modal-telephone" tabindex="-1" role="dialog" aria-labelledby="model-telephoneLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title ml-auto" id="model-telephoneLabel">Contact Us</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body my-3" style="text-align: center">
+            <h3>Telephone: 0219888637</h3>
+            <h3>Email: admin-popup@gmail.com</h3>
+          </div>
+          <div class="bg-light my-0" style="text-align: center;color: gray" id="modalTelephoneFooter">
+            <p>1234 Smith and Western Street<br />Cape Town <br />South Africa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="modalTwo">
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+          
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title ml-auto" id="exampleModalLabel">Chat to us</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="sender-name" class="col-form-label">Sender:</label>
+                    <input type="text" class="form-control" id="sender-name" placeholder="Your Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  
+   <div class="container">
+  <br><br>
+    <div class="row">
+      <div class="col-md-10 mx-auto">    
+      
+      <div class="step well bg-warning" style="padding: 30px; margin-bottom: 0px; border-radius: 0px; border-bottom: none;   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);">
+        <h3 style="text-align: center">Personal Information</h3>
+
+        <form>
+
+            <div class="form-group row mt-4">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">First Name</label>
+              <div class="col-4 ">
+              <input type="text" class="form-control" placeholder="First name">
+              </div>
+            </div>  
+
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Last Name</label>  
+              <div class="col-4 ">
+                <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-6">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+          </div>
+
+          <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col">
+              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+            <div class="col">
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Confrim Password">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control w-75" id="inputAddress" placeholder="1234 Main St">
+          </div>
+          <div class="form-group">
+            <label for="inputAddress2">Address 2</label>
+            <input type="text" class="form-control w-75" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="inputCity">City</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-5">
+              <label for="inputState">Province</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>Province 2</option>
+                <option>Province 3</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputZip">Zip</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+          </div>
+          <div class="form-group d-flex justify-content-end">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Subsribe to our Newsletter
+              </label>
+            </div>
+          </div>
+        
+        </form>
+
+      </div>
+      <div class="step well" style="padding: 30px; margin-bottom: 0px; border-radius: 0px; border-bottom: none;   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); background-color: #3497aa">
+        <h3 style="text-align: center">Business Information</h3>
+
+        <hr>
+
+          <h5>Tell us more about your Service</h5>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Type here..." style="background-color: lightgray"></textarea>
+            <button type="button" class="btn btn-primary mt-3" style="margin-left: 709px">Save changes</button>
+          </div>
+      </div>
+      <div class="step well bg-danger" style="padding: 30px; margin-bottom: 0px; border-radius: 0px; border-bottom: none;   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);">
+          <h3 style="text-align: center; margin-left: -15px">Showcase Your Work</h3>
+        <div class="row">
+          <div class="col-md-12" id="large-img">
+            <h5 style="text-align: center ; padding-top: 15px; margin-left: -12px">Upload your main image here</h5>
+            <h5 style="text-align: center; color:white; padding-top: 25px; margin-left: -2px">Please upload landscape image here (1280x960)</h5>
+            <form>
+              <div class="form-group mt-4 d-flex justify-content-center" style="margin-left: 2px">
+                <input type="file" class="form-control-file w-25" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+        </div> 
+        <br />
+         <div class="row">
+          <div class="col img-small">
+            <h5 style="text-align: center; color:white; padding-top: 2px">860x960</h5>
+            <form>
+              <div class="form-group mt-4" style="margin: auto">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+          <div class="col img-small">
+            <h5 style="text-align: center; color:white; padding-top: 2px">860x960</h5>
+            <form>
+              <div class="form-group mt-4" style="margin: auto">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+          <div class="col img-small">
+            <h5 style="text-align: center; color:white; padding-top: 2px">860x960</h5>
+            <form>
+              <div class="form-group mt-4" style="margin: auto">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+          <div class="col img-small">
+            <h5 style="text-align: center; color:white; padding-top: 2px">860x960</h5>
+            <form>
+              <div class="form-group mt-4" style="margin: auto">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+          <div class="col img-small">
+            <h5 style="text-align: center; color:white; padding-top: 2px">860x960</h5>
+            <form>
+              <div class="form-group mt-4" style="margin: auto">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col img-small">
+            <h5 style="text-align: center; color:white; padding-top: 2px">860x960</h5>
+            <form>
+              <div class="form-group mt-4" style="margin: auto">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+          <div class="col img-small">
+            <h5 style="text-align: center; color:white; padding-top: 2px">860x960</h5>
+            <form>
+              <div class="form-group mt-4" style="margin: auto">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+          <div class="col img-small">
+            <h5 style="text-align: center; color:white; padding-top: 2px">860x960</h5>
+            <form>
+              <div class="form-group mt-4" style="margin: auto">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+          <div class="col img-small">
+            <h5 style="text-align: center; color:white; padding-top: 2px">860x960</h5>
+            <form>
+              <div class="form-group mt-4" style="margin: auto">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+          <div class="col img-small">
+            <h5 style="text-align: center; color:white; padding-top: 2px">860x960</h5>
+            <form>
+              <div class="form-group mt-4" style="margin: auto">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>  
+      <div class="step well bg-success" style="margin-bottom: 0px; border-radius: 0px; height: 200px; border-bottom: none">
+        <h3 style="text-align: center; margin-left: -2px; padding-top: 60px">Congratulations You Are Registered!</h3>  
+      </div>
+     </div> 
+    </div>
+    <div class="row">
+      <div class="col-md-10 mx-auto" >
+        <div class="progress" style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-top:none; width: 100%; box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4); height: 25px
+">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-md-10 mt-2" style="margin-left: 495px">
+      <button class="action back btn btn-info" style="margin-left: -30px">Back</button>
+      <button class="action next btn btn-info" >Next</button>
+      <button class="action submit btn btn-success">Submit</button>
+    </div>
+  </div>    
+
+   </div>
+   <footer class="bg-light d-flex justify-content-center fixed-bottom" >
+      <p>Copyright &copy; PopUp 2018</p>
+    </footer>
+ </body>
+</html>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    var current = 1;
+    
+    widget      = $(".step");
+    btnnext     = $(".next");
+    btnback     = $(".back"); 
+    btnsubmit   = $(".submit");
+
+    // Init buttons and UI
+    widget.not(':eq(0)').hide();
+    hideButtons(current);
+    setProgress(current);
+
+    // Next button click action
+    btnnext.click(function(){
+      if(current < widget.length){
+        widget.show();
+        widget.not(':eq('+(current++)+')').hide();
+        setProgress(current);
+      }
+      hideButtons(current);
+    })
+
+    // Back button click action
+    btnback.click(function(){
+      if(current > 1){
+        current = current - 2;
+        btnnext.trigger('click');
+      }
+      hideButtons(current);
+    })      
+  });
+
+  // Change progress bar action
+  setProgress = function(currstep){
+    var percent = parseFloat(100 / widget.length) * currstep;
+    percent = percent.toFixed();
+    $(".progress-bar").css("width",percent+"%").html(percent+"%");    
+  }
+
+  // Hide buttons according to the current step
+  hideButtons = function(current){
+    var limit = parseInt(widget.length); 
+
+    $(".action").hide();
+
+    if(current < limit) btnnext.show();
+    if(current > 1) btnback.show();
+    if (current == limit) { btnnext.hide(); btnsubmit.show(); }
+  }
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19096935-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+    
+  </body>
+</html>

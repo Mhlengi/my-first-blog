@@ -11,7 +11,8 @@ urlpatterns = [
 	url(r'^post/(?P<pk>\d+)/remove/$', views.post_remove, name='post_remove'),
 	url(r'^post/(?P<pk>\d+)/card/deck/$', views.post_deck, name='post_deck'),
 	url(r'^post/(?P<pk>\d+)/card/$', views.post_card, name='post_card'),
-	url(r'^post/(?P<pk>\d+)/form/$', views.post_form, name='post_form')
+	url(r'^post/(?P<pk>\d+)/form/$', views.post_form, name='post_form'),
+	url(r'^post/(?P<pk>\d+)/form2/$', views.post_form2, name='post_form2')
 
 
 ]

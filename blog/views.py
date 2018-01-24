@@ -22,6 +22,9 @@ def post_card(request, pk):
 def post_form(request, pk):
 	return render(request, 'blog/form.html')
 
+def post_form2(request, pk):
+	return render(request, 'blog/form2.html')	
+
 @login_required
 def post_new(request):
 	if request.method == 'POST':
