@@ -19,6 +19,8 @@ def post_deck(request, pk):
 def post_card(request, pk):
 	return render(request, 'blog/details_page.html')
 
+def post_form(request, pk):
+	return render(request, 'blog/form.html')
 
 @login_required
 def post_new(request):
