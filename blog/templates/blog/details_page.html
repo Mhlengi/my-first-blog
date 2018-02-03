@@ -148,18 +148,31 @@
 
     <div class="container">
       <div class="row" id="row1">
-        <div class="col-md-8 bg-light" id="details">
+        <div class="col-md-8" id="details">
           <div class="card mb-3">
-            <div class="card-body">
-              <div class="row inline">
-              <img class="card-img-top ml-3" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img">
-                <h4 class="ml-3 mt-3">Dominikus D. <br/> <img src="{% static 'svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 20px"><span class="xtext"> Luanda, Angola</span></h4>
+            <div class="card-body bg-light py-3">
+              <div class="row">
+              <div class="col">
+                <div class="row inline">
+                  <img class="card-img-top ml-3" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img">
+                  <h4 class="ml-3 mt-3">Dominikus D. <br/> <img src="{% static 'svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 20px"><span class="xtext"> Luanda, Angola</span></h4>
+                </div>
+              </div>  
+              <div class="col">
+                <div class="row inline py-0"> 
+                  <h6 class="mt-3" style="margin-left: 120px" id="contacts">T: 0780071833 <br/> E: fabiocalete@gmail.com <br/> Address: 123 Smithson Street, Small City 7570</h6>
+                </div>
               </div>
-              <h2 class="card-title mt-3">Service Name</h2>
+              </div>
+            </div>     
+            <div class="px-3">
+              <h2 class="mt-2 mb-0" style="position: relative;">Service Title</h4>
+              <h5 class="mt-0 mb-3" style="position: relative; margin-top: 15px">Category</h5>      
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p> 
-            </div>     
+              </p>
+            </div>
+
           </div>
         <div class="row" style="width: 762px">
           
@@ -418,7 +431,10 @@
       console.log($('#row-review').css('width'));
       console.log($('#review-card').css('width'));
 
-      
+      $('#contact-btn').click(function() {
+          $('#contacts').toggleClass('hidden');
+          $()
+      });
     </script>
   </body>
 </html>

@@ -262,23 +262,17 @@ body {
           
 <div class="container" style="margin-top: 100px">
     <!-- multistep form -->
-  <form id="msform">
-    <!-- progressbar -->
-    <ul id="progressbar">
-      <li class="active">Account Setup</li>
-      <li>Social Profiles</li>
-      <li>Personal Details</li>
-    </ul>
+  <form id="msform" style="margin-left: 200px">
     <!-- fieldsets -->
-    <fieldset>
+    <fieldset style="width: 650px; padding: 30px; margin-bottom: 0px; border-radius: 0px; border-bottom: none;   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); background-color: #76D7EA">
       <h2 class="fs-title">Create your account</h2>
       <h3 class="fs-subtitle">Step 1</h3>
       <input type="text" name="email" placeholder="Email" />
       <input type="password" name="pass" placeholder="Password" />
       <input type="password" name="cpass" placeholder="Confirm Password" />
-      <input type="button" name="next" class="next action-button" value="Next" />
+      <input type="button" name="next" class="next action-button" value="Next" />  
     </fieldset>
-    <fieldset>
+    <fieldset style="width: 650px; padding: 30px; margin-bottom: 0px; border-radius: 0px; border-bottom: none;   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); background-color: #FAFA37">
       <h2 class="fs-title">Social Profiles</h2>
       <h3 class="fs-subtitle">Step 2</h3>
       <input type="text" name="twitter" placeholder="Twitter" />
@@ -287,7 +281,7 @@ body {
       <input type="button" name="previous" class="previous action-button" value="Previous" />
       <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
-    <fieldset>
+    <fieldset style="width: 650px; padding: 30px; margin-bottom: 0px; border-radius: 0px; border-bottom: none;   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); background-color: #F7468A">
       <h2 class="fs-title">Personal Details</h2>
       <h3 class="fs-subtitle">Step 3</h3>
       <input type="text" name="fname" placeholder="First Name" />
@@ -299,6 +293,78 @@ body {
     </fieldset>
   </form>
 </div>
+
+<!--
+<form>
+
+            <div class="form-group row mt-4">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">First Name</label>
+              <div class="col-4 ">
+              <input type="text" class="form-control" placeholder="First name">
+              </div>
+            </div>  
+
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Last Name</label>  
+              <div class="col-4 ">
+                <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-6">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+          </div>
+
+          <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col">
+              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+            <div class="col">
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Confrim Password">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control w-75" id="inputAddress" placeholder="1234 Main St">
+          </div>
+          <div class="form-group">
+            <label for="inputAddress2">Address 2</label>
+            <input type="text" class="form-control w-75" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="inputCity">City</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-5">
+              <label for="inputState">Province</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>Province 2</option>
+                <option>Province 3</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputZip">Zip</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+          </div>
+          <div class="form-group d-flex justify-content-end">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Subsribe to our Newsletter
+              </label>
+            </div>
+          </div>
+        
+        </form> -->
 
 <!--
     <footer class="bg-light d-flex justify-content-center mt-3 py-2" >
@@ -401,5 +467,8 @@ body {
       return false;
     })
   </script>
+   <footer class="bg-light d-flex justify-content-center mt-3 py-2 fixed-bottom" >
+      <p>Copyright &copy; PopUp 2018</p>
+    </footer>
   </body>
 </html>

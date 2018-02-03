@@ -16,7 +16,7 @@
 
       body {
         position: relative;
-        padding-top: 50px;
+        padding-top: 0px;
       }
  
       .hidden {
@@ -26,7 +26,7 @@
         position: relative;
       }
       .jumbotron {
-        height: 450px;
+        height: 520px;
         text-align: center;
         background-image: url("{% static 'images/children.jpg' %}");
         border-radius: 0px;
@@ -35,7 +35,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding-top: 100px;
+        padding-top: 148px;
       }
 
       #regText {
@@ -44,7 +44,8 @@
 
       #search {
         text-align: center;
-        width:320px;
+        width:414px;
+        height: 40px;
       }
 
       #rightdiv {
@@ -53,10 +54,11 @@
 
       #searchButton {
         margin-left: 20px;
+        height: 40px;
       }
 
       #middlediv {
-        padding-left: 110px;
+        padding-left: 10px;
               }
 
       #card-img {
@@ -68,7 +70,8 @@
       }     
 
       #freelancer-cards {
-        margin-top: 40px;
+        background-color: white;
+        position: relative;
       }
      /* #freelancer-cards {
         width: 100%;
@@ -140,11 +143,11 @@
     </style>
   </head>
 
-  <body data-spy="scroll" data-target="#navBar" data-offset="0">
+  <body data-spy="scroll" data-target="#navBar" data-offset="100">
 
        
     <nav id="navBar" class="navbar navbar-expand-md navbar-light bg-light fixed-top" >
-      <a class="navbar-brand" href="#">PopUp</a>
+      <a class="navbar-brand" href="#home">PopUp</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcollapse" aria-controls="navcollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -229,7 +232,7 @@
                   </div>
                   <div class="form-group">
                     <label for="message-text" class="col-form-label">Message:</label>
-                    <textarea class="form-control" id="message-text"></textarea>
+                    <textarea class="form-control" rows="4" id="message-text"></textarea>
                   </div>
                 </form>
               </div>
@@ -242,7 +245,7 @@
         </div>
     </div>
 
-    <div class="jumbotron mb-5">
+    <div class="jumbotron mb-3" id="home">
       <h1 class="display-4">Share your passion with the world</h1>
       <p class="lead">Register and become a Service provider today</p>
       <a href="form2">
@@ -256,36 +259,50 @@
           <form class="form-inline">
           <div class="form-group" id="form-two">
             <div class="input-group ">
-              <div class="input-group-prepend">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}"/ id="svg-img" style="width: 30px"></span></button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">My location</a>
-                  <div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">City 1</a>
-                  <a class="dropdown-item" href="#">City 2</a>
-                  <a class="dropdown-item" href="#">City 3</a>
-                </div>
-              </div>
               <input type="search" class="form-control" aria-label="Text input with dropdown button" id="search">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'images/svg/si-glyph-book-4.svg' %}"/ id="svg-img" style="width: 30px"></button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">All freelancers</a>
-                  <div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Category 1</a>
-                  <a class="dropdown-item" href="#">Category 2</a>
-                  <a class="dropdown-item" href="#">Category 3</a>
-                </div>
-              </div>
             </div>
           </div>
           <button type="submit" class="btn btn-primary" id="searchButton">Search</button>
         </form>
         </div>
       </div>
-    </div>
 
-        <div class="container" id="freelancer-cards">
+      <div class="row mt-2">
+        <form class="form-inline" style="margin-left: 329px;">
+          <div class="input-group mb-3 mr-1">
+            <div class="input-group-prepend">
+                  <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 20px"/></span></button>
+            </div>
+              <div class="input-group" style="width: 160px">
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Location</option>
+                <option value="1">City 1</option>
+                <option value="2">City 2</option>
+                <option value="3">City 3</option>
+              </select>
+            </div>
+          </div> 
+
+          <div class="input-group mb-3">
+          <div class="input-group" style="width: 160px;">
+              <select class="custom-select" id="inputGroupSelect02">
+                <option selected>Category</option>
+                <option value="1">All freelancers</option>
+                <option value="2">Category 1</option>
+                <option value="3">Category 2</option>
+                <option value="3">Category 3</option>
+
+              </select>
+          </div>    
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false"><img src="{% static 'images/svg/si-glyph-book-4.svg' %}"/ id="svg-img" style="width: 20px"></button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+      <div class="row pt-5 mb-4" id="freelancer-cards">
+        <div class="container">
           <div class="card-deck">
              <div class="card border-white mr-1 my-4" >
               <div class="relative card-space">
@@ -479,7 +496,7 @@
                   <span class="fa fa-star checked"></span>
                 </div>
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
               </div>
             </div>
             <div class="card border-white mr-1 my-4">
@@ -498,7 +515,7 @@
                   <span class="fa fa-star"></span>
                 </div>
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
               </div>
             </div>
             <div class="card border-white mr-1 my-4">
@@ -517,54 +534,71 @@
                   <span class="fa fa-star"></span>
                 </div>
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
               </div>
             </div>
           </div>
-           
-     <div class="container-fluid bg-light my-1" id="about">
-      <div id="snowflakeContainer">
-          <p class="snowflake">*</p>
-        <h1 style="text-align: center;color: gray">About Us</h3>
-        <h4 style="text-align: center;"> Our vision is based on three basic principles </h2>
-          <br />
-        <div class="row">
-          <div class="col-sm-4">
-            <img class="card-img-top" src="{% static 'images/icon1.png' %}" alt="Card image cap" id="card-img" style="height: 100px; width: 100px; margin-left: 115px">
-            <div class="card-body" style="text-align: center">
-              <h5 class="card-title">Integrity</h5>
-              <p class="card-text" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>        
+      </div>
+
+     <div class="row bg-light">
+       <div class="container-fluid pt-4 mt-3" id="about">
+          <h1 style="text-align: center;color: gray">About Us</h1>
+          <h4 style="text-align: center;"> Our vision is based on three basic principles </h4>
+            <br />
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="card-img-top" src="{% static 'images/icon1.png' %}" alt="Card image cap" id="card-img" style="height: 100px; width: 100px; margin-left: 115px">
+              <div class="card-body" style="text-align: center">
+                <h5 class="card-title">Integrity</h5>
+                <p class="card-text" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <img class="card-img-top" src="{% static 'images/icon2.png' %}" alt="Card image cap" id="card-img" style="height: 100px; width: 100px; margin-left: 115px">
+              <div class="card-body" style="text-align: center">
+                <h5 class="card-title">Community</h5>
+                <p class="card-text" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <img class="card-img-top" src="{% static 'images/icon3.png' %}" alt="Card image cap" id="card-img" style="height: 100px; width: 100px; margin-left: 115px">
+              <div class="card-body" style="text-align: center">
+                <h5 class="card-title">Something else</h5>
+                <p class="card-text" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
             </div>
           </div>
-          <div class="col-sm-4">
-            <img class="card-img-top" src="{% static 'images/icon2.png' %}" alt="Card image cap" id="card-img" style="height: 100px; width: 100px; margin-left: 115px">
-            <div class="card-body" style="text-align: center">
-              <h5 class="card-title">Community</h5>
-              <p class="card-text" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. 
+           </p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
+           </p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
+            Lorem ipsum dolor ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Auris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor.
+            </p>
+              <div id="demo" class="collapse">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
+                Lorem ipsum dolor ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Auris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
+                </p>
+                <br/>
+                <p>  
+                Lorem ipsum dolor ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Auris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor.
+                </p>
+              </div>   
+              <div class="col-md-12 d-flex justify-content-center">
+                <button class="btn btn-secondary d-flex justify-content-center" data-toggle="collapse" data-target="#demo" id="more">Read more</button>
+              </div>
           </div>
-          <div class="col-sm-4">
-            <img class="card-img-top" src="{% static 'images/icon3.png' %}" alt="Card image cap" id="card-img" style="height: 100px; width: 100px; margin-left: 115px">
-            <div class="card-body" style="text-align: center">
-              <h5 class="card-title">Something else</h5>
-              <p class="card-text" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-          </div>
-        </div> 
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. 
-         </p>
-         <div class="row">
-            <div class="col-md-12 d-flex justify-content-center">
-            <a class="btn btn-secondary" href="#">Read more</a>   
-         </div>
-        </div>
+       
+       
      </div>
-    </div>
-
       <!--<script src="fallingsnow.js"></script>-->
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!--
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
@@ -593,7 +627,53 @@
         
         
         //alert($('#card-img').css('height'));
-        
+
+        //$('.dropdown-item').click(function(){
+           // $('#search').val($(this).html());
+       // });
+        $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      console.log("this.hash = " + this.hash);
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+
+      console.log("Offset = " + $(hash).offset() + '\n' + "Offset Top = " + $(hash).offset().top + '\n' + "Window Location" + window.location.hash)
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
+      var el = $('#freelancer-cards');
+//var el = document.getElementById("freelancer-cards"); // Or whatever method to get the element
+
+// To set the scroll
+el.scrollTop = 558;
+el.scrollLeft = 0;
+
+// To increment the scroll
+el.scrollTop += 100;
+//el.scrollLeft += 100;
+
+        //var el = document.querySelector('#freelancer-cards');
+
+// get scroll position in px
+      console.log("The height is: " + $('#about').css('height'));
       </script>
     <footer class="bg-light d-flex justify-content-center mt-3 py-2" >
       <p>Copyright &copy; PopUp 2018</p>
