@@ -57,9 +57,9 @@
         height: 40px;
       }
 
-      #middlediv {
-        padding-left: 10px;
-              }
+      .middlediv {
+        margin-left: 31%;
+      }
 
       #card-img {
         border-radius: 5px;
@@ -255,7 +255,7 @@
       <p>Looking for a service? Search over 45,000+ Services.</p>
 
       <div class="row">
-        <div class="col-md-12 d-flex justify-content-center" id="middlediv">
+        <div class="col-md-12 middlediv">
           <form class="form-inline">
           <div class="form-group" id="form-two">
             <div class="input-group ">
@@ -265,19 +265,12 @@
           <button type="submit" class="btn btn-primary" id="searchButton">Search</button>
         </form>
         </div>
-      </div>
-
-      <div class="row mt-2">
-
-        <div class="col-3">
-          
-        </div>
-        <div class="col-5" style="margin-left: 20px">
-            <form class="form-inline">
-          <div class="input-group mb-3 mr-1">
-            <div class="input-group-prepend">
+        <div class="col-md-12 middlediv mt-2">
+          <form class="form-inline">
+            <div class="input-group mb-3 mr-1">
+              <div class="input-group-prepend">
                   <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 20px"/></span></button>
-            </div>
+              </div>
               <div class="input-group" style="width: 160px">
               <select class="custom-select" id="inputGroupSelect01">
                 <option selected>Location</option>
@@ -304,13 +297,24 @@
             </div>
           </div>
           </form>
+          
+        </div>
+      </div>
+
+      <div class="row mt-2">
+
+        <div class="col-3">
+          
+        </div>
+        <div class="col-5" style="margin-left: 20px">
+          
         </div>
         <div class="col-4">
           
         </div>
         </div>
       </div>
-      <div class="row pt-5 mb-4" id="freelancer-cards">
+      <div class="row pt-5 mb-5" id="freelancer-cards">
         <div class="container">
           <div class="card-deck">
              <div class="card border-white mr-1 my-4" >
@@ -551,7 +555,7 @@
       </div>
 
      <div class="row bg-light">
-       <div class="container-fluid pt-4 mt-3" id="about">
+       <div class="container-fluid pt-5" id="about">
           <h1 style="text-align: center;color: gray">About Us</h1>
           <h4 style="text-align: center;"> Our vision is based on three basic principles </h4>
             <br />
