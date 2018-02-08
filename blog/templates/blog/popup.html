@@ -17,6 +17,7 @@
       body {
         position: relative;
         padding-top: 0px;
+
       }
  
       .hidden {
@@ -35,7 +36,9 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding-top: 148px;
+        padding-top: 50px;
+        overflow: hidden;
+
       }
 
       #regText {
@@ -44,23 +47,29 @@
 
       #search {
         text-align: center;
-        width:414px;
+        width:100%;
         height: 40px;
       }
 
+      #two, #four {
+        display: none;
+      }
       #rightdiv {
         padding: 0;
       }
 
       #searchButton {
-        margin-left: 20px;
         height: 40px;
+        display: block;
+        width: 100%;
       }
 
       .middlediv {
-        margin-left: 31%;
+        padding: 0px;
       }
 
+      .in-one {
+      }
       #card-img {
         border-radius: 5px;
         padding: 0px;
@@ -121,6 +130,176 @@
       width: 100%;
       height: 100%;
     }
+
+    .display-4 {
+      font-size: 30px;
+    }
+
+    .lead-2{
+      font-size: 15px;
+    }
+
+    .lead {
+      display: none;
+    }
+
+    #lead {
+      display: none;
+    }
+
+    #hrule {
+        margin-bottom: 1rem!important
+        margin-top:1rem!important;
+      }
+
+    @media (min-width: 768px) and (max-width: 991.98px) { 
+
+      .display-4 {
+        font-size: 3rem;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+
+      .lead {
+        font-size: 1rem;
+        font-weight: 300;
+        display: block;
+      }
+
+      #lead {
+        display: block;
+      }
+
+      .lead-2 {
+        display: none;
+      }
+
+      .jumbotron {
+        height: 520px;
+        text-align: center;
+        background-image: url("{% static 'images/children.jpg' %}");
+        border-radius: 0px;
+
+        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 100px;
+        overflow: hidden;
+
+      }
+
+      #search {
+        text-align: center;
+        height: 40px;
+      }
+
+      #searchButton {
+        margin-left: 0px;
+        height: 40px;
+        width: 100px;
+      }
+
+      #searchBar {
+        padding-left: 1rem;
+      }
+
+      .middlediv {
+        margin-left: 31%;
+      }
+
+      #two, #three {
+        display: none;
+      }
+      #four {
+        display: block;
+      }
+
+      #location {
+        padding-right: 5px;
+      }
+
+      #category {
+        padding-left: 5px;
+      }
+
+      #column-1 {
+        margin-left: 25%;
+        padding: 0px;
+      }
+
+      #hrule {
+        margin-bottom: 1.5rem!important
+        margin-top:1.5rem!important;
+      }
+    }
+
+    @media (min-width: 992px) { 
+
+      .display-4 {
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+
+      .lead {
+        font-size: 1.25rem;
+        font-weight: 300;
+        display: block;
+      }
+      #lead  {
+        display: block;
+      }
+      .lead-2 {
+        display: none;
+      }
+      .jumbotron {
+        height: 520px;
+        text-align: center;
+        background-image: url("{% static 'images/children.jpg' %}");
+        border-radius: 0px;
+
+        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 148px;
+        overflow: hidden;
+
+      }
+
+      #searchButton {
+        margin-left: 0px;
+        height: 40px;
+        width: 100px;
+      }
+
+      #searchBar {
+        padding-left: 0px;
+      }
+      #two, #three {
+        display: none;
+      }
+      #four {
+        display: block;
+      }
+
+      #location {
+        padding-right: 5px;
+      }
+
+      #category {
+        padding-left: 5px;
+      }
+      #column-1 {
+        margin-left: 25%;
+      }
+
+      #hrule {
+        margin-bottom: 1.5rem!important
+        margin-top:1.5rem!important;
+      }
+  }
     /*
     #snowflakeContainer {
     position: absolute;
@@ -248,30 +427,89 @@
     <div class="jumbotron mb-3" id="home">
       <h1 class="display-4">Share your passion with the world</h1>
       <p class="lead">Register and become a Service provider today</p>
+      <p class="lead-2">Register and become a Service provider today</p>
       <a href="form2">
         <button type="button" class="btn btn-danger"><span id="reg-button">Register</span></button>
       </a>
-      <hr class="my-4">
-      <p>Looking for a service? Search over 45,000+ Services.</p>
+      <hr id="hrule">
+      <p id="lead">Looking for a service? Search over 45,000+ Services.</p>
+      <form>  
+        <div class="row">
+          <div class="col-sm-12 col-md-6" id="column-1">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="search" class="form-control" aria-label="Text input with dropdown button" placeholder="Search" id="search">
+                </div>
+              </div>            
+            <div class="row">
 
+              <div class="col-sm-12 col-md-6" id="location">
+              <form class="form-inline">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="one"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 15px"/></span></button>
+                  </div>
+                  <div class="col input-group in-one px-0">
+                    <select class="custom-select" id="inputGroupSelect01">
+                      <option selected>Location</option>
+                      <option value="1">City 1</option>
+                      <option value="2">City 2</option>
+                      <option value="3">City 3</option>
+                    </select>
+                  </div>
+                  <div class="input-group-append">
+                    <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="two"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 20px"/></span></button>
+                  </div>
+                </div> 
+              </form>  
+              </div>
+
+              <div class="col-sm-12 col-md-6" id="category">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="three"><span><img src="{% static 'images/svg/si-glyph-book-4.svg' %}" id="svg-img" style="width: 15px"/></span></button>
+                  </div>
+                  <div class="col input-group in-one px-0">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Category</option>
+                      <option value="1">All freelancers</option>
+                      <option value="2">Category 1</option>
+                      <option value="3">Category 2</option>
+                      <option value="3">Category 3</option>
+                    </select>
+                  </div>
+                  <div class="input-group-append">
+                    <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="four"><span><img src="{% static 'images/svg/si-glyph-book-4.svg' %}" id="svg-img" style="width: 20px"/></span></button>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+            <div class="col-sm-12 col-md-2" id="searchBar">
+              <button type="submit" class="btn btn-primary" id="searchButton">Search</button>
+            </div>
+        </div>
+      </form>      
+<!--
+    <form>
       <div class="row">
-        <div class="col-md-12 middlediv">
-          <form class="form-inline">
-          <div class="form-group" id="form-two">
-            <div class="input-group ">
+
+        <div class="col-sm-12 col-md-6">
+
+          <div class="form-group">
+            <div class="input-group">
               <input type="search" class="form-control" aria-label="Text input with dropdown button" id="search">
             </div>
           </div>
-          <button type="submit" class="btn btn-primary" id="searchButton">Search</button>
-        </form>
-        </div>
-        <div class="col-md-12 middlediv mt-2">
+
+          <div class="row no-gutters">
+            <div class="col-sm-12 col-md-6 middlediv mt-2">
           <form class="form-inline">
-            <div class="input-group mb-3 mr-1">
-              <div class="input-group-prepend">
-                  <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 20px"/></span></button>
-              </div>
-              <div class="input-group" style="width: 160px">
+            <div class="input-group mb-3">
+                <div class="col-1 input-group-prepend px-0 ">
+                    <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="one"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 15px"/></span></button>
+                </div>
+              <div class="col input-group in-one px-0 ">
               <select class="custom-select" id="inputGroupSelect01">
                 <option selected>Location</option>
                 <option value="1">City 1</option>
@@ -279,10 +517,16 @@
                 <option value="3">City 3</option>
               </select>
             </div>
+            <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="two"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 20px"/></span></button>
+              </div>
           </div> 
 
           <div class="input-group mb-3">
-          <div class="input-group" style="width: 160px;">
+            <div class="input-group-prepend">
+              <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="three"><img src="{% static 'images/svg/si-glyph-book-4.svg' %}"/ id="svg-img" style="width: 20px"></button>
+            </div>
+          <div class="input-group in-one">
               <select class="custom-select" id="inputGroupSelect02">
                 <option selected>Category</option>
                 <option value="1">All freelancers</option>
@@ -293,27 +537,22 @@
               </select>
           </div>    
             <div class="input-group-append">
-              <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false"><img src="{% static 'images/svg/si-glyph-book-4.svg' %}"/ id="svg-img" style="width: 20px"></button>
+              <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="four"><img src="{% static 'images/svg/si-glyph-book-4.svg' %}"/ id="svg-img" style="width: 20px"></button>
             </div>
           </div>
           </form>
           
         </div>
-      </div>
+          </div>
+        </div>
 
-      <div class="row mt-2">
+        <div class="col-sm-12 col-md-6">
+          <button type="submit" class="btn btn-primary btn-block" id="searchButton">Search</button>
+        </div>
 
-        <div class="col-3">
-          
-        </div>
-        <div class="col-5" style="margin-left: 20px">
-          
-        </div>
-        <div class="col-4">
-          
-        </div>
-        </div>
       </div>
+    </form>-->
+    </div>
       <div class="row pt-5 mb-5" id="freelancer-cards">
         <div class="container">
           <div class="card-deck">
