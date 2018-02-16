@@ -93,6 +93,13 @@
         text-align: center;
       }
 
+      #card-container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: 25px;
+        margin-left: 25px;
+      }
       .category {
         font-size:10px; 
         margin-bottom: 0px;
@@ -313,6 +320,19 @@
       .serviceTitle {
         font-size: 23px;
       }
+
+      #card-container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      #card-row {
+        padding-left: 1rem!important;
+        padding-right: 1rem!important;
+      }
     }
 
     @media (min-width: 992px) { 
@@ -411,6 +431,19 @@
       }
       .serviceTitle {
         font-size: 23px;
+      }
+
+      #card-container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      #card-row {
+        padding-left: 1rem!important;
+        padding-right: 1rem!important;
       }
   }
     /*
@@ -519,10 +552,6 @@
               <div class="modal-body">
                 <form>
                   <div class="form-group">
-                    <label for="sender-name" class="col-form-label">Sender:</label>
-                    <input type="text" class="form-control" id="sender-name" placeholder="Your Email">
-                  </div>
-                  <div class="form-group">
                     <label for="message-text" class="col-form-label">Message:</label>
                     <textarea class="form-control" rows="4" id="message-text"></textarea>
                   </div>
@@ -560,7 +589,7 @@
               <form class="form-inline">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="one"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 15px"/></span></button>
+                    <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="one"><span><img src="{% static 'images/svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 20px"/></span></button>
                   </div>
                   <div class="col input-group in-one px-0">
                     <select class="custom-select" id="inputGroupSelect01">
@@ -580,7 +609,7 @@
               <div class="col-sm-12 col-md-6" id="category">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="three"><span><img src="{% static 'images/svg/si-glyph-book-4.svg' %}" id="svg-img" style="width: 15px"/></span></button>
+                    <button class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" id="three"><span><img src="{% static 'images/svg/si-glyph-book-4.svg' %}" id="svg-img" style="width: 20px"/></span></button>
                   </div>
                   <div class="col input-group in-one px-0">
                     <select class="custom-select" id="inputGroupSelect02">
@@ -607,7 +636,7 @@
     </div>
    
      
-    <div class="container pt-2 px-5" id="freelancer-cards">
+    <div class="container pt-2 px-2" id="freelancer-cards">
       <h3 class="mt-5">Services</h3>
       <div class="row ">
           <div class="col-sm-6 col-md-6 col-lg-3 cardz mb-3 ">
@@ -941,7 +970,7 @@
           </div>         
       </div>
      
-
+    </div>
 <!--
       <div class="row pt-5 mb-5" id="freelancer-cards">
         <div class="container">
@@ -1217,42 +1246,7 @@
           </div> -->
 
   
-         <div class="row mx-3">
-<!--
-           <div class="col-sm-4 d-flex justify-content-center">
-             <div class="row"></div>
-             <img class="img-fluid" src="{% static 'images/icon1.png' %}" alt="Card image cap" id="">
-           </div>
-           <div class="col-sm-4 d-flex justify-content-center">
-             <img class="img-fluid" src="{% static 'images/icon2.png' %}" alt="Card image cap" id="">
-           </div>
-           <div class="col-sm-4 d-flex justify-content-center">
-             <img class="img-fluid" src="{% static 'images/icon3.png' %}" alt="Card image cap" id="">
-           </div>
-         </div>
-         <div class="row mt-3">
-           <div class="col-sm-4 d-flex justify-content-center">
-            <h4>Title</h4>
-           </div>
-           <div class="col-sm-4 d-flex justify-content-center">
-            <h4>Title</h4>
-
-           </div>
-           <div class="col-sm-4 d-flex justify-content-center">
-            <h4>Title</h4>
-           </div>
-         </div>
-         <div class="row ml-3">
-           <div class="col-sm-4 d-flex justify-content-center">
-              <p class="" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>           
-            </div>
-           <div class="col-sm-4 d-flex justify-content-center">
-              <p class="" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
-           </div>
-           <div class="col-sm-4 d-flex justify-content-center">
-              <p class="" >This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>            </div>
-         </div>
--->
+         <div class="row mx-3" id="card-row">
             <div class="col-sm-12 col-md-4 my-3">
               <div class="row">
                 <div class="col-sm-12 d-flex justify-content-center">
@@ -1292,32 +1286,33 @@
                 </div>
               </div>            
             </div>
-
-          <div class="container mx-4">
-            <h2 class="cardz-text">Our story</h2>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. 
-           </p>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
-           </p>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
-            Lorem ipsum dolor ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Auris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor.
-            </p>
-              <div id="demo" class="collapse">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
-                Lorem ipsum dolor ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Auris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor.
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
-                </p>
-                <br/>
-                <p>  
-                Lorem ipsum dolor ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Auris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor.
-                </p>
-              </div>   
-              <div class="col-md-12 d-flex justify-content-center">
-                <button class="btn btn-secondary d-flex justify-content-center" data-toggle="collapse" data-target="#demo" id="more">Read more</button>
-              </div>            
-          </div>
         </div>
+        
+        <div class="container" id="card-container">
+              <h2 class="cardz-text">Our story</h2>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. 
+             </p>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
+             </p>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
+              Lorem ipsum dolor ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Auris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor.
+              </p>
+                <div id="demo" class="collapse">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
+                  Lorem ipsum dolor ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Auris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor.
+                  </p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. <br>
+                  </p>
+                  <br/>
+                  <p>  
+                  Lorem ipsum dolor ex quis iaculis euismod, ligula mauris convallis purus, quis semper tortor erat id eros. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed sit amet, consectetur adipiscing elit. Fusce ac maximus dui. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Mauris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor. Integer id egestas urna. Vestibulum blandit, quis vestibulum dolor. Auris accumsan, eros non placerat lacinia, libero orci convallis lectus, vel eleifend sapien lacus in nunc. Sed quis vestibulum dolor.
+                  </p>
+                </div>   
+                <div class="col-md-12 d-flex justify-content-center">
+                  <button class="btn btn-secondary d-flex justify-content-center" data-toggle="collapse" data-target="#demo" id="more">Read more</button>
+                </div>            
+              
+            </div>
        
        
      </div>
@@ -1402,7 +1397,7 @@ el.scrollTop += 100;
 // get scroll position in px
       console.log("The height is: " + $('#about').css('height'));
       </script>
-    <footer class="bg-light d-flex justify-content-center mt-3 py-2" >
+    <footer class="bg-light d-flex justify-content-center mt-3 py-2 fixed-bottom" >
       <p>Copyright &copy; PopUp 2018</p>
     </footer>
   </body>
