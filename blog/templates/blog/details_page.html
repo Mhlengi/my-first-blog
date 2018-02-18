@@ -61,7 +61,32 @@
       }
     #contact-details {
       
-      }  
+      } 
+
+
+    ul.sdUserSkills li span {
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    background: #00adef;
+    color: #fff;
+    font-size: .85em;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+} 
+
+  ul.sdUserSkills {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}   
+ ul.sdUserSkills li {
+    display: inline-block;
+    float: left;
+    clear: none;
+    margin: 0 5px 5px 0;
+}
 
       @media (min-width: 321px) and (max-width: 375px) {
         .cardz {
@@ -84,15 +109,19 @@
     
     @media (min-width: 769px){
      #contactz {
-      height: 424px;
       position: sticky;
       top: 56px;
-      border:0.5px solid darkgrey;
-      border-radius: 5px;
+     
     }
 
     #contacts {
         margin-left: 120px;
+      }
+
+      .img-fluid {
+      max-width: 80%;
+      height: auto;
+      border-radius: 4px;
       }
 
     }
@@ -314,54 +343,79 @@
       </div>
     </div>  -->
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-lg-6">
-          <div class="card mb-3">
-            <div class="card-body bg-light py-3">
-              <div class="row">
+      <div class="row mx-3 ">
+        <div class="col-sm-12 col-lg-7 ">
+          <!--<div class="row">
+            <div class="col px-0">
+              <hr>
               <div class="col">
-                <div class="row inline">
-                  <img class="card-img-top ml-3" src="{% static 'images/water.jpg' %}" alt="Card image cap" id="card-img">
-                  <h4 class="ml-3 mt-3">Dominikus D. <br/> <img src="{% static 'svg/si-glyph-pin-location.svg' %}" id="svg-img" style="width: 20px"><span class="xtext"> Luanda, Angola</span></h4>
-                </div>
-              </div>  
-              <div class="col">
-                <div class="row inline py-0"> 
-                  <h6 class="mt-3" id="contacts">T: 0780071833 <br/> E: fabiocalete@gmail.com <br/> Address: 123 Smithson Street, Small City 7570</h6>
-                </div>
+                <h1>Service Provider Name</h1> 
               </div>
-              </div>
-            </div>     
-            <div class="px-3">
-              <h2 class="mt-2 mb-0" style="position: relative;">Service Title</h2>
-              <h5 class="mt-0 mb-3" style="position: relative; margin-top: 15px">Category</h5>      
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
+              <hr>  
             </div>
+          </div> -->
+          <div class="row mx-0">
+              <h1 style="display:inline-block;background:#000;color:#fff;padding:5px 15px;margin:0;font-size:2.2em;">Graphic Design </h1>            
+            </div>
+          <div class="row ml-0 mr-3">
+            <div class="col bg-secondary ">
+              <h6>Subcat 1, Subcat 2, Subcat 3</h6>            
+            </div>
+          </div>  
 
-          </div>    
+          <div class="row mx-0">
+            <ul class="sdUserSkills" style="list-style: none;">
+              <li> <span>Skill 1</span></li>
+              <li> <span>Skill 2</span></li>
+              <li> <span>Skill 3</span></li>                                    
+            </ul>
+          </div> 
+<br>
+          <div class="row bg-light mx-1">
+            <h3>About Nicole </h3>
+            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          </div>
+<hr>          
         </div>
-        
-        <div class="col-sm-12 col-lg-6" id="contactz" style="background-color: #5890D6">
-          <br />
-          <h4>Sign up and get latest <br />information from our <br/ >Newsletter</h4>
-          <form>
-            <div class="form-group my-3" style="width: 230px">
-              <input type="text" class="form-control" id="firstName" placeholder="First Name">
+       <hr> 
+        <div class="col-sm-12 col-lg-5 px-5" id="contactz" style="background-color: #5890D6; border-radius: 5px;">
+         
+            <div class="col-md-12 d-flex justify-content-center my-4">
+              <button class="btn btn-success" data-toggle="collapse" data-target="#demo" style="width: 230px">Contact</button>
             </div>
-            <div class="form-group" style="width: 230px">
-              <input type="text" class="form-control" id="secondName" placeholder="Second Name">
-            </div>
-            <div class="form-group" style="width: 230px">
-              <input type="email" class="form-control" id="email" placeholder="Email">
-            </div>
-            <button type="submit" class="btn btn-success my-1" style="width: 230px">Contact</button>
-          </form>      
-        </div>
+                  
+                  <div class="collapse show" >
 
-        <div class="col-sm-12 col-lg-6">
+                    <label for="telnum">Tel</label>
+                    <div class="input-group mb-2 mt-2">
+                        <input class="col-lg-10 form-control" type="text" value="0780071833" id="telnum" readonly>   
+                      <div class="input-group-append">
+                          <button class="btn btn-secondary copy" type="button" data-toggle="tooltip" data-placement="top" title="Copy text to clipboard" id="btn1">copy</button>
+                      </div>
+                    </div>
+
+                    <label for="emailnum">Email</label>
+                    <div class="input-group mb-2 ">
+                        <input class="col-lg-10 form-control" type="text" value="fabiocalete@gmail.com" id="emailnum" readonly>   
+                      <div class="input-group-append">
+                          <button class="btn btn-secondary copy" type="button" id="btn2">copy</button>
+                      </div>
+                    </div>
+
+                    <label for="addnum">Address</label>                    
+                    <div class="input-group mb-2 ">
+                        <input class="col-lg-10 form-control" type="text" value="1234 ABC Street Town Hall, 7530" id="addnum" readonly>   
+                      <div class="input-group-append">
+                          <button class="btn btn-secondary copy" type="button" id="btn3">copy</button>
+                      </div>
+                    </div>  
+                    </div>                                                         
+                  </div>
+        </div> 
+
+        <div class="col-sm-12 col-lg-6 px-5">
+          <div class="row">
           <h2>Reviews</h2>
           <div class="review">
             <div class="row inline pt-2">
@@ -379,9 +433,11 @@
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
               </p>
               <hr>
-          </div>        
+          </div>  
+            
+          </div>
+
         </div>
-      </div>
     </div> 
 
   <div class="row">
@@ -579,6 +635,41 @@
       $('#contact-btn').click(function() {
           $('#contacts').toggleClass('hidden');
           $()
+      });
+
+      //Tooltips
+      $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+    });
+
+      //Copy to clipboard
+      
+
+      $('.copy').click(function(){
+        if ($(this).attr('id') == 'btn1') {
+                                        
+          var copyText = document.getElementById("telnum");
+          copyText.select();
+          document.execCommand("Copy");
+
+         // $(this).tooltip('hide')
+          //.attr('title', "Copied: " + copyText.value)
+         // .tooltip('hide');
+
+          $(this).tooltip('show');
+
+
+        } else if ($(this).attr('id') == 'btn2'){
+          var copyText = document.getElementById("emailnum");
+          copyText.select();
+          document.execCommand("Copy");
+        }
+        else {
+        var copyText = document.getElementById("addnum");
+        copyText.select();
+        document.execCommand("Copy");
+      }
+
       });
     </script>
   </body>
