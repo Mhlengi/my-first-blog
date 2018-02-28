@@ -40,11 +40,33 @@
   #register {
     overflow-x: hidden;
   }
-
-
+  .skills {
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    background: #00adef;
+    color: #fff;
+    font-size: .85em;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+} 
  
+  #align {
+    -webkit-box-pack: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
 
-
+      @media (min-width: 426px) {
+      #align {
+        -webkit-box-pack: end!important;
+        -ms-flex-pack: end!important;
+        justify-content: flex-end!important;
+        margin-right: 0px;
+      }
+    }
+  
   </style>
         
 
@@ -252,11 +274,11 @@
               <label for="subCategory" class="col-sm-12 col-form-label" style="font-size: 20px; padding-left: 0px">Sub Category</label>
                 <div id="cat-box" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 100%; height: 100px; border: 1px solid gray; border-radius: 0.5px; overflow-y: scroll; list-style: none; ; padding-left: 2rem">
                   <h6 draggable="true" ondragstart="drag(event)" id="drag1"><span>Sub Cat 1</span></h6>
-                  <h6 draggable="true" ondragstart="drag(event)" id="drag2"><span>Sub Cat 2</span></h6>
-                  <h6 draggable="true" ondragstart="drag(event)" id="drag3"><span>Sub Cat 3</span></h6>
-                  <h6 draggable="true" ondragstart="drag(event)" id="drag4"><span>Sub Cat 4</span></h6>
-                  <h6 draggable="true" ondragstart="drag(event)" id="drag5"><span>Sub Cat 5</span></h6>
-                  <h6 draggable="true" ondragstart="drag(event)" id="drag6"><span>Sub Cat 6</span></h6>
+                  <h6  draggable="true" ondragstart="drag(event)" id="drag2"><span>Sub Cat 2</span></h6>
+                  <h6  draggable="true" ondragstart="drag(event)" id="drag3"><span>Sub Cat 3</span></h6>
+                  <h6  draggable="true" ondragstart="drag(event)" id="drag4"><span>Sub Cat 4</span></h6>
+                  <h6  draggable="true" ondragstart="drag(event)" id="drag5"><span>Sub Cat 5</span></h6>
+                  <h6  draggable="true" ondragstart="drag(event)" id="drag6"><span>Sub Cat 6</span></h6>
 
                 </div>
               </div>
@@ -268,10 +290,24 @@
               </div>              
             </div>
             <div class="form-group row">
-              <label for="inputService" class="col-sm-2 col-md-3 col-form-label" style="font-size: 20px">More info</label>
-              <div class="col-sm-8">
-                <input type="email" class="form-control" id="inputService">
+              <div class="col-sm-12 col-md-6">
+              <label for="subSkill" class="col-sm-12 col-form-label" style="font-size: 20px; padding-left: 0px">Skills</label>
+                <div id="cat-box" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 100%; height: 100px; border: 1px solid gray; border-radius: 0.5px; overflow-y: scroll; list-style: none; ; padding-left: 2rem">
+                  <h6 draggable="true" ondragstart="drag(event)" id="skill1"><span>Skill 1</span></h6>
+                  <h6 draggable="true" ondragstart="drag(event)" id="skill2"><span>Skill 2</span></h6>
+                  <h6 draggable="true" ondragstart="drag(event)" id="skill3"><span>Skill 3</span></h6>
+                  <h6 draggable="true" ondragstart="drag(event)" id="skill4"><span>Skill 4</span></h6>
+                  <h6 draggable="true" ondragstart="drag(event)" id="skill5"><span>Skill 5</span></h6>
+                  <h6 draggable="true" ondragstart="drag(event)" id="skill6"><span>Skill 6</span></h6>
+
+                </div>
               </div>
+              <div class="col-sm-12 col-md-6">
+                <label for="subCategory" class="col-sm-12 col-form-label" style="font-size: 20px; padding-left: 0px">Selected</label>
+                <div id="cat-box-select" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 100%; height: 100px; border: 1px solid gray; border-radius: 0.5px; overflow-y: scroll; list-style: none; padding-left: 2rem ">
+                
+                </div>                
+              </div>              
             </div>
           </form>
           <br>
@@ -279,7 +315,7 @@
           <h5>Tell us more about your Service</h5>
           <div class="form-group">
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Type here..." style="background-color: white"></textarea>
-            <div class="row d-flex justify-content-end"><button type="button" class="btn btn-primary mt-3 " style="margin-right: 15px">Save changes</button></div>
+            <div class="row" id="align"><button type="button" class="btn btn-primary mt-3 " >Save changes</button></div>
             
           </div>
       </div>
