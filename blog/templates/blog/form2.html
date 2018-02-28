@@ -40,6 +40,11 @@
   #register {
     overflow-x: hidden;
   }
+
+
+ 
+
+
   </style>
         
 
@@ -243,6 +248,29 @@
               </div>
             </div>
             <div class="form-group row">
+              <div class="col-sm-12 col-md-6">
+              <label for="subCategory" class="col-sm-12 col-form-label" style="font-size: 20px; padding-left: 0px">Sub Category</label>
+                <div id="cat-box" style="width: 100%; height: 100px; border: 1px solid gray; border-radius: 0.5px; overflow-y: scroll;">
+                  <ul class="sub-cat" ondrop="drop(event)" ondragover="allowDrop(event)" style="list-style: none;">
+                    <li draggable="true" ondragstart="drag(event)" > <span>Sub Cat 1</span></li>
+                    <li draggable="true" ondragstart="drag(event)" id="drag2"> <span>Sub Cat 2</span></li>
+                    <li draggable="true" ondragstart="drag(event)" id="drag3"> <span>Sub Cat 3</span></li>
+                    <li draggable="true" ondragstart="drag(event)" id="drag4"> <span>Sub Cat 4</span></li>
+                    <li draggable="true" ondragstart="drag(event)" id="drag5"> <span>Sub Cat 5</span></li>
+                    <li draggable="true" ondragstart="drag(event)" id="drag6"> <span>Sub Cat 6</span></li>
+                    <li draggable="true" ondragstart="drag(event)" id="drag7"> <span>Sub Cat 7</span></li>
+                    <li draggable="true" ondragstart="drag(event)" id="drag8"> <span>Sub Cat 8</span></li>         
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <label for="subCategory" class="col-sm-12 col-form-label" style="font-size: 20px; padding-left: 0px">Selected</label>
+                <div id="cat-box-select" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 100%; height: 100px; border: 1px solid gray; border-radius: 0.5px; overflow-y: scroll; list-style: none; padding-left: 2rem ">
+                  
+                </div>                
+              </div>              
+            </div>
+            <div class="form-group row">
               <label for="inputService" class="col-sm-2 col-md-3 col-form-label" style="font-size: 20px">More info</label>
               <div class="col-sm-8">
                 <input type="email" class="form-control" id="inputService">
@@ -254,7 +282,8 @@
           <h5>Tell us more about your Service</h5>
           <div class="form-group">
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Type here..." style="background-color: white"></textarea>
-            <button type="button" class="btn btn-primary mt-3" style="margin-left: 709px">Save changes</button>
+            <div class="row d-flex justify-content-end"><button type="button" class="btn btn-primary mt-3 " style="margin-right: 15px">Save changes</button></div>
+            
           </div>
       </div>
       <div class="step well" style="padding: 30px; margin-bottom: 0px; border-radius: 0px; border-bottom: none;   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4); background-color: #FF4466">
@@ -446,6 +475,20 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
 </script>
 
     

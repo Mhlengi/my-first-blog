@@ -88,6 +88,23 @@
     margin: 0 5px 5px 0;
 }
 
+.carousel-control-prev {
+    left: 0!important;
+    height: 50px!important;
+    margin-top: 80px!important;
+    margin-left: -25px!important;
+    width: 105px!important;
+}
+
+.carousel-control-next {
+    right: 0!important;
+    height: 50px!important;
+    margin-top: 80px!important;
+    margin-right: -25px!important;
+    width: 105px!important;
+}
+
+
       @media (min-width: 321px) and (max-width: 375px) {
         .cardz {
         width: 125px;
@@ -96,6 +113,23 @@
       #contacts {
         margin-left: 10px;
       }
+
+
+      .carousel-control-prev {
+    left: 0!important;
+    height: 50px!important;
+    margin-top: 85px!important;
+    margin-left: -25px!important;
+    width: 105px!important;
+}
+
+.carousel-control-next {
+    right: 0!important;
+    height: 50px!important;
+    margin-top: 85px!important;
+    margin-right: -25px!important;
+    width: 105px!important;
+}
       }
       @media (min-width: 376px) and (max-width: 425px) {
         .cardz {
@@ -105,8 +139,43 @@
       #contacts {
         margin-left: 120px;
       }
+
+            .carousel-control-prev {
+    left: 0!important;
+    height: 50px!important;
+    margin-top: 90px!important;
+    margin-left: -28px!important;
+    width: 105px!important;
+}
+
+.carousel-control-next {
+    right: 0!important;
+    height: 50px!important;
+    margin-top: 90px!important;
+    margin-right: -25px!important;
+    width: 105px!important;
+}
     }
     
+   @media (min-width: 426px) and (max-width: 768px) {
+      
+            .carousel-control-prev {
+    left: 0!important;
+    height: 50px!important;
+    margin-top: 130px!important;
+    margin-left: -25px!important;
+    width: 105px!important;
+}
+
+.carousel-control-next {
+    right: 0!important;
+    height: 50px!important;
+    margin-top: 130px!important;
+    margin-right: -25px!important;
+    width: 105px!important;
+}
+    }
+
     @media (min-width: 769px){
      #contactz {
       position: sticky;
@@ -124,8 +193,74 @@
       border-radius: 4px;
       }
 
+
+      .carousel-control-next {
+    right: 0!important;
+    height: 100px!important;
+    margin: auto!important;
+    width: 105px!important;
+    margin-right: 40px!important;
+}
+
+.carousel-control-prev {
+    left: 0!important;
+    height: 100px!important;
+    margin: auto!important;
+    width: 105px!important;
+    margin-left: 25px!important;
+} 
+
+  #row-card{
+    margin-left: 3rem!important;
+  }
     }
-      
+
+        @media (min-width: 1045px){
+
+
+      .carousel-control-next {
+    right: 0!important;
+    height: 100px!important;
+    margin: auto!important;
+    width: 105px!important;
+    margin-right: 70px!important;
+}
+
+.carousel-control-prev {
+    left: 0!important;
+    height: 100px!important;
+    margin: auto!important;
+    width: 105px!important;
+    margin-left: 25px!important;
+} 
+
+  #row-card{
+    margin-left: 3rem!important;
+  }
+    }
+     @media (min-width: 2560px){
+
+
+      .carousel-control-next {
+    right: 0!important;
+    height: 100px!important;
+    margin: auto!important;
+    width: 105px!important;
+    margin-right: 150px!important;
+}
+
+.carousel-control-prev {
+    left: 0!important;
+    height: 100px!important;
+    margin: auto!important;
+    width: 105px!important;
+    margin-left: 25px!important;
+} 
+
+  #row-card{
+    margin-left: 3rem!important;
+  }
+    }
       
     </style>
     <link rel="stylesheet" href="{% static 'js/slider/nivo-lightbox.css' %}">
@@ -443,11 +578,11 @@
   <div class="row">
     <div class="col-sm-12">
   
-    <div id="recipeCarousel" class="carousel slide mt-5 pt-1 bg-light" data-interval="6000" data-pause="false">
+    <div id="recipeCarousel" class="carousel slide mt-5 pt-1 bg-light" data-interval="0" data-pause="false">
             <h3 class="mt-2 mb-4 pt-2" style="margin-left:15px">Similar Services</h3>
             <div class="carousel-inner bg-light">
               <div class="carousel-item active">
-                <div class="row mx-auto">
+                <div class="row mx-auto" id="row-card">
                  <div class="col-xs-4 col-sm-4 cardz mb-3 ">
                   <img class="img-fluid img-card" src="{% static 'images/water.jpg' %}" alt="Card image cap">
                 <div class="rating mb-0 " style="margin-left: -10px">    
@@ -506,7 +641,7 @@
               </div>
                   
               <div class="carousel-item">
-                <div class="row mx-auto">
+                <div class="row mx-auto" id="row-card">
                  <div class="col-xs-4 col-sm-4 cardz mb-3 ">
                   <img class="img-fluid img-card" src="{% static 'images/water.jpg' %}" alt="Card image cap">
                 <div class="rating mb-0">    
